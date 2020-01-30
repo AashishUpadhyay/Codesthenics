@@ -49,19 +49,5 @@ namespace UnitTestProject
             var received = new FindNumberAmazonGoStores().NumberAmazonGoStores(5, 4, grid);
             Assert.IsTrue(received == 2);
         }
-
-        [TestMethod]
-        public void Test4()
-        {
-            var grid = new int[,] {
-                { 1, 1, 1, 1 },
-                { 1, 0, 1, 0 },
-                { 0, 1, 0, 0 },
-                { 1, 0, 1, 1 },
-                { 1, 1, 1, 1 }
-            };
-            var received = new FindNumberAmazonGoStores().NumberAmazonGoStores(5, 4, grid);
-            Assert.IsTrue(received == 3);
-        }
     }
 }
