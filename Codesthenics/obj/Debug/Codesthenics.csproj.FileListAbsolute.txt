@@ -1,0 +1,12 @@
+C:\Users\upadha7\Documents\Visual Studio 2015\Projects\Codesthenics\HitmanList\bin\Debug\HitmanList.exe.config
+C:\Users\upadha7\Documents\Visual Studio 2015\Projects\Codesthenics\HitmanList\bin\Debug\HitmanList.exe
+C:\Users\upadha7\Documents\Visual Studio 2015\Projects\Codesthenics\HitmanList\bin\Debug\HitmanList.pdb
+C:\Users\upadha7\Documents\Visual Studio 2015\Projects\Codesthenics\HitmanList\obj\Debug\Codesthenics.csprojResolveAssemblyReference.cache
+C:\Users\upadha7\Documents\Visual Studio 2015\Projects\Codesthenics\HitmanList\obj\Debug\HitmanList.exe
+C:\Users\upadha7\Documents\Visual Studio 2015\Projects\Codesthenics\HitmanList\obj\Debug\HitmanList.pdb
+C:\Users\upadha7\Codesthenics\Codesthenics\bin\Debug\Codesthenics.exe.config
+C:\Users\upadha7\Codesthenics\Codesthenics\bin\Debug\Codesthenics.exe
+C:\Users\upadha7\Codesthenics\Codesthenics\bin\Debug\Codesthenics.pdb
+C:\Users\upadha7\Codesthenics\Codesthenics\obj\Debug\Codesthenics.csprojResolveAssemblyReference.cache
+C:\Users\upadha7\Codesthenics\Codesthenics\obj\Debug\Codesthenics.exe
+C:\Users\upadha7\Codesthenics\Codesthenics\obj\Debug\Codesthenics.pdb
