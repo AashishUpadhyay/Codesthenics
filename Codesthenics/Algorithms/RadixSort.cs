@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HitmanList
+namespace Codesthenics
 {
     /*
     Sample: [98, 20, 12, 66, 13, 22, 19] 

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 //[12,3,45,6,7,91,1]
-namespace HitmanList
+namespace Codesthenics
 {
     public class BinarySearchTree
     {

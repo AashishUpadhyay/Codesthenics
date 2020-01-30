@@ -8,7 +8,7 @@ using System.Threading.Tasks;
     A robot is tasked to remove obstacle from a field laid out as a two dimensional matrix, 0 represents trench, 1 represent flat surface, 9 represents obstacle. Write a program to find the path length to reach obstacle
  */
 
-namespace HitmanList
+namespace Codesthenics
 {
     /*
             { 1, 1, 0, 0, 0 }

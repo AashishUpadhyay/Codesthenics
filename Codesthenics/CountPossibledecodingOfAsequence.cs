@@ -18,7 +18,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HitmanList
+namespace Codesthenics
 {
     class CountPossibledecodingOfAsequence
     {
