@@ -1,5 +1,0 @@
-C:\Users\upadha7\Documents\Visual Studio 2015\Projects\CodingProblems\HitmanList\bin\x64\Debug\HitmanList.exe.config
-C:\Users\upadha7\Documents\Visual Studio 2015\Projects\CodingProblems\HitmanList\bin\x64\Debug\HitmanList.exe
-C:\Users\upadha7\Documents\Visual Studio 2015\Projects\CodingProblems\HitmanList\bin\x64\Debug\HitmanList.pdb
-C:\Users\upadha7\Documents\Visual Studio 2015\Projects\CodingProblems\HitmanList\obj\x64\Debug\HitmanList.exe
-C:\Users\upadha7\Documents\Visual Studio 2015\Projects\CodingProblems\HitmanList\obj\x64\Debug\HitmanList.pdb
