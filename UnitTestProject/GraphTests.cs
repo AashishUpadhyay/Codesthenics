@@ -14,7 +14,7 @@ namespace UnitTestProject
         [TestMethod]
         public void GraphTestDFS()
         {
-            var graph = new Graph<int>(
+            var graph = new GraphAJ<int>(
                 new List<int>() { 1, 2, 3, 5 },
                 new List<Tuple<int, int>>()
                 {
@@ -37,7 +37,7 @@ namespace UnitTestProject
         [TestMethod]
         public void DisconnectedGraphTestDFS()
         {
-            var graph = new Graph<int>(
+            var graph = new GraphAJ<int>(
                 new List<int>() { 1, 2, 3, 4, 5 },
                 new List<Tuple<int, int>>()
                 {
@@ -68,7 +68,7 @@ namespace UnitTestProject
         [TestMethod]
         public void GraphTestBFS()
         {
-            var graph = new Graph<int>(
+            var graph = new GraphAJ<int>(
                 new List<int>() { 1, 2, 3, 5 },
                 new List<Tuple<int, int>>()
                 {
@@ -91,7 +91,7 @@ namespace UnitTestProject
         [TestMethod]
         public void DisconnectedGraphTestBFS()
         {
-            var graph = new Graph<int>(
+            var graph = new GraphAJ<int>(
                 new List<int>() { 1, 2, 3, 4, 5 },
                 new List<Tuple<int, int>>()
                 {
@@ -122,7 +122,7 @@ namespace UnitTestProject
         [TestMethod]
         public void GraphCheckIfCycleExistsTests()
         {
-            var graph = new Graph<int>(
+            var graph = new GraphAJ<int>(
                 new List<int>() { 1, 2, 3, 4, 5 },
                 new List<Tuple<int, int>>()
                 {
@@ -145,7 +145,7 @@ namespace UnitTestProject
         [TestMethod]
         public void GraphCheckIfCycleExistsTestsNegative()
         {
-            var graph = new Graph<int>(
+            var graph = new GraphAJ<int>(
                 new List<int>() { 1, 2, 3, 4, 5, 6 },
                 new List<Tuple<int, int>>()
                 {
@@ -162,6 +162,36 @@ namespace UnitTestProject
             bool cycleExists = (new GraphCheckIfCycleExists<int>()).CycleExists(graph);
 
             Assert.IsFalse(cycleExists);
+        }
+
+        [TestMethod]
+        public void GraphAMDFS()
+        {
+            var graph = new GraphAM<int>(
+                new int[,] {
+                {0,0,0},
+                {0,0,0},
+                {0,0,0}
+            }, 3, 3);
+
+            var result = graph.DFS();
+            var expected = new HashSet<GraphCellCoordinates>()
+            {
+                new GraphCellCoordinates(0,0),
+                new GraphCellCoordinates(0,1),
+                new GraphCellCoordinates(0,2),
+                new GraphCellCoordinates(1,0),
+                new GraphCellCoordinates(1,1),
+                new GraphCellCoordinates(1,2),
+                new GraphCellCoordinates(2,0),
+                new GraphCellCoordinates(2,1),
+                new GraphCellCoordinates(2,2)
+            };
+
+            foreach (var item in expected)
+            {
+                Assert.IsTrue(result.Contains(item));
+            }
         }
     }
 }

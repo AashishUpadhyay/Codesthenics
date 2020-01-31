@@ -8,7 +8,7 @@ namespace Codesthenics
 {
     public class GraphCheckIfCycleExists<TVertex>
     {
-        public bool CycleExists(Graph<TVertex> graph)
+        public bool CycleExists(GraphAJ<TVertex> graph)
         {
             if (graph.AdjacencyList.Count == 0)
                 throw new ArgumentException("Empty Graph!");
@@ -18,7 +18,7 @@ namespace Codesthenics
             return returnValue;
         }
 
-        private bool CycleExistsInternal(Graph<TVertex> graph, TVertex vertex, TVertex sourceVertex, HashSet<TVertex> visited)
+        private bool CycleExistsInternal(GraphAJ<TVertex> graph, TVertex vertex, TVertex sourceVertex, HashSet<TVertex> visited)
         {
             bool returnValue = false;
 

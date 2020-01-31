@@ -9,6 +9,7 @@ namespace Codesthenics
 {
     public class FindNumberAmazonGoStores
     {
+        //Diagonals opposited elements are different cluster
         public int NumberAmazonGoStores(int rows, int column, int[,] grid)
         {
             var returnValue = 0;

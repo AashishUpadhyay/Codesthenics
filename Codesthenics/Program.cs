@@ -66,7 +66,7 @@ namespace Codesthenics
             //Utility.PrintAllElements(PalindromePairGenerator.GeneratePalindromePairs(new string[] { "code", "edoc", "da", "d" }));
             //Utility.PrintAllElements(LettersInZigZagForm.PrintLettersInZigZagForm("thisisazigzag", 4));
             //Utility.PrintAllElements(LettersInZigZagForm.PrintLettersInZigZagForm("HelppeopleinterestedinthisrepositoryunderstandyourprojectbyaddingaREADME.", 4));
-            Utility.PrintAllElements(Quicksort.Sort(new int[] { 98, 20, 12, 66, 13, 22, 19, 12, 98, 20 }));
+            //Utility.PrintAllElements(Quicksort.Sort(new int[] { 98, 20, 12, 66, 13, 22, 19, 12, 98, 20 }));
             //Utility.PrintAllElements(Quicksort.Sort(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }));
             //Utility.PrintAllElements(Quicksort.Sort(new int[] { 1, 9, 8, 7, 6, 5, 4, 3, 2, 10 }));
             //Utility.PrintAllElements(CountingSort.Sort(new int[] { 8, 4, 7, 9, 2 }));
@@ -183,7 +183,30 @@ namespace Codesthenics
             //ReconstructArrayWithPlusAndMinusSigns.Test2();
             //ReconstructArrayWithPlusAndMinusSigns.Test3();
 
-            LruCacheTests.RunAll();
+            //LruCacheTests.RunAll();
+
+
+            var graph = new GraphAM<int>(
+               new int[,] {
+                {0,0,0},
+                {0,0,0},
+                {0,0,0}
+           }, 3, 3);
+
+            var result = graph.DFS();
+            var expected = new HashSet<GraphCellCoordinates>()
+            {
+                new GraphCellCoordinates(0,0),
+                new GraphCellCoordinates(0,1),
+                new GraphCellCoordinates(0,2),
+                new GraphCellCoordinates(1,0),
+                new GraphCellCoordinates(1,1),
+                new GraphCellCoordinates(1,2),
+                new GraphCellCoordinates(2,0),
+                new GraphCellCoordinates(2,1),
+                new GraphCellCoordinates(2,2)
+            };
+
             Console.Read();
         }
     }

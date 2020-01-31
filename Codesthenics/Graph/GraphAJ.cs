@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Codesthenics
 {
-    public class Graph<TVertex>
+    public class GraphAJ<TVertex>
     {
         private Dictionary<TVertex, IList<TVertex>> adjacencyList = new Dictionary<TVertex, IList<TVertex>>();
 
         public Dictionary<TVertex, IList<TVertex>> AdjacencyList => adjacencyList;
 
-        public Graph(IList<TVertex> vertices, IList<Tuple<TVertex, TVertex>> edges)
+        public GraphAJ(IList<TVertex> vertices, IList<Tuple<TVertex, TVertex>> edges)
         {
             foreach (var vertex in vertices)
                 adjacencyList.Add(vertex, new List<TVertex>());
