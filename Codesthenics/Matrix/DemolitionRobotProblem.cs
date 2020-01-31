@@ -23,61 +23,6 @@ namespace Codesthenics
         private static int m_rows;
         private static int m_cols;
 
-        public static int FindPath(int[,] fieldSpecifications, int rows, int cols)
-        {
-            m_fieldSpecifications = fieldSpecifications;
-            m_rows = rows;
-            m_cols = cols;
-
-            var path = new List<Cell>();
-            var returnValue = 0;
-            ObstacleFound(new Cell() { RowId = 0, ColId = 0 }, new Cell() { RowId = -1, ColId = -1 }, ref returnValue, ref path);
-            return returnValue;
-        }
-
-        private static bool ObstacleFound(Cell currentCell, Cell parentCell, ref int length, ref List<Cell> path)
-        {
-            var returnValue = false;
-
-            if (currentCell.RowId < 0 ||
-                currentCell.RowId >= m_rows ||
-                currentCell.ColId < 0 ||
-                currentCell.ColId >= m_cols ||
-                m_fieldSpecifications[currentCell.RowId, currentCell.ColId] == 0)
-                return false;
-
-            if (m_fieldSpecifications[currentCell.RowId, currentCell.ColId] == 9)
-            {
-                path.Add(currentCell);
-                return true;
-            }
-
-            var leftNeighbour = new Cell() { RowId = currentCell.RowId, ColId = currentCell.ColId - 1 };
-            var rightNeighbour = new Cell() { RowId = currentCell.RowId, ColId = currentCell.ColId + 1 };
-            var upNeighbour = new Cell() { RowId = currentCell.RowId - 1, ColId = currentCell.ColId };
-            var downNeighbour = new Cell() { RowId = currentCell.RowId + 1, ColId = currentCell.ColId };
-
-            if (!IsParentCell(leftNeighbour, parentCell) && ObstacleFound(leftNeighbour, currentCell, ref length, ref path) ||
-                (!IsParentCell(rightNeighbour, parentCell) && ObstacleFound(rightNeighbour, currentCell, ref length, ref path)) ||
-                (!IsParentCell(upNeighbour, parentCell) && ObstacleFound(upNeighbour, currentCell, ref length, ref path)) ||
-                (!IsParentCell(downNeighbour, parentCell) && ObstacleFound(downNeighbour, currentCell, ref length, ref path)))
-            {
-                returnValue = true;
-            }
-
-            if (!returnValue)
-                return false;
-
-            path.Add(currentCell);
-            length++;
-            return true;
-        }
-
-        private static bool IsParentCell(Cell cell, Cell parentCell)
-        {
-            return (cell.RowId == parentCell.RowId) && (cell.ColId == parentCell.ColId);
-        }
-
         public int FindPathUsingBFS(int[,] fieldSpecifications, int rows, int cols)
         {
             m_fieldSpecifications = fieldSpecifications;
