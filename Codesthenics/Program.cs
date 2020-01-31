@@ -186,27 +186,42 @@ namespace Codesthenics
             //LruCacheTests.RunAll();
 
 
-           // var graph = new GraphAM<int>(
-           //    new int[,] {
-           //     {0,0,0},
-           //     {0,0,0},
-           //     {0,0,0}
-           //}, 3, 3);
+            // var graph = new GraphAM<int>(
+            //    new int[,] {
+            //     {0,0,0},
+            //     {0,0,0},
+            //     {0,0,0}
+            //}, 3, 3);
 
-           // var result = graph.BFS();
-           // var expected = new HashSet<GraphCellCoordinates>()
-           // {
-           //     new GraphCellCoordinates(0,0),
-           //     new GraphCellCoordinates(0,1),
-           //     new GraphCellCoordinates(0,2),
-           //     new GraphCellCoordinates(1,0),
-           //     new GraphCellCoordinates(1,1),
-           //     new GraphCellCoordinates(1,2),
-           //     new GraphCellCoordinates(2,0),
-           //     new GraphCellCoordinates(2,1),
-           //     new GraphCellCoordinates(2,2)
-           // };
+            // var result = graph.BFS();
+            // var expected = new HashSet<GraphCellCoordinates>()
+            // {
+            //     new GraphCellCoordinates(0,0),
+            //     new GraphCellCoordinates(0,1),
+            //     new GraphCellCoordinates(0,2),
+            //     new GraphCellCoordinates(1,0),
+            //     new GraphCellCoordinates(1,1),
+            //     new GraphCellCoordinates(1,2),
+            //     new GraphCellCoordinates(2,0),
+            //     new GraphCellCoordinates(2,1),
+            //     new GraphCellCoordinates(2,2)
+            // };\
 
+            var graph = new int[,] {
+                { 1, 1, 1, 1, 0 },
+                { 0, 1, 1, 1, 0 },
+                { 0, 1, 1, 1, 0 },
+                { 0, 1, 1, 1, 0 },
+                { 0, 1, 9, 1, 0 } };
+
+            //var graph = new int[,] {
+            //    { 1, 1, 1 },
+            //    { 0, 1, 1 },
+            //    { 0, 9, 1} };
+
+            var output = new DemolitionRobotProblem().FindPathUsingBFS(graph, 5, 5);
+            //var output = DemolitionRobotProblem.FindPath(graph, 3, 3);
+            Console.WriteLine(output);
             Console.Read();
         }
     }

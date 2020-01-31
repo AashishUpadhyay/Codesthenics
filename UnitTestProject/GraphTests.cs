@@ -223,5 +223,31 @@ namespace UnitTestProject
                 Assert.IsTrue(result.Contains(item));
             }
         }
+
+        [TestMethod]
+        public void DemolitionRobotProblem()
+        {
+            var graph = new int[,] {
+                { 1, 1, 0, 0, 0 },
+                { 0, 1, 1, 0, 0 },
+                { 0, 9, 1, 0, 0 },
+                { 0, 1, 1, 0, 0 },
+                { 0, 1, 0, 0, 0 } };
+
+            Assert.IsTrue((new DemolitionRobotProblem()).FindPathUsingBFS(graph, 5, 5) == 3);
+        }
+
+        [TestMethod]
+        public void DemolitionRobotProblemTest2()
+        {
+            var graph = new int[,] {
+                { 1, 1, 1, 1, 0 },
+                { 0, 1, 1, 1, 0 },
+                { 0, 1, 1, 1, 0 },
+                { 0, 1, 1, 1, 0 },
+                { 0, 1, 9, 1, 0 } };
+
+            Assert.IsTrue((new DemolitionRobotProblem()).FindPathUsingBFS(graph, 5, 5) == 6);
+        }
     }
 }
