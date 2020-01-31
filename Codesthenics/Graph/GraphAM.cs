@@ -29,6 +29,37 @@ namespace Codesthenics
             return visited;
         }
 
+        public HashSet<GraphCellCoordinates> BFS()
+        {
+            var visited = new HashSet<GraphCellCoordinates>();
+
+            var start = new GraphCellCoordinates(0, 0);
+            var queue = new Queue<GraphCellCoordinates>();
+            queue.Enqueue(start);
+
+            while (queue.Count > 0)
+            {
+                var itemProcessed = queue.Dequeue();
+                Console.WriteLine($"CELL {itemProcessed.RowIndex} and {itemProcessed.ColIndex}");
+                visited.Add(itemProcessed);
+
+                for (int x = itemProcessed.RowIndex - 1; x <= itemProcessed.RowIndex + 1; x++)
+                {
+                    for (int y = itemProcessed.ColIndex - 1; y <= itemProcessed.ColIndex + 1; y++)
+                    {
+                        var newCell = new GraphCellCoordinates(x, y);
+                        if (IsCellValid(x, y) && !(x == itemProcessed.RowIndex && y == itemProcessed.ColIndex) && !visited.Contains(newCell))
+                        {
+                            Console.WriteLine($"CELL {x} and {y}");
+                            queue.Enqueue(newCell);
+                        }
+                    }
+                }
+            }
+
+            return visited;
+        }
+
         private void DFSInternal(int i, int j, HashSet<GraphCellCoordinates> visited)
         {
             if (visited.Contains(new GraphCellCoordinates(i, j)))
