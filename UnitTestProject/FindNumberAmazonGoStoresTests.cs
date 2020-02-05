@@ -62,7 +62,7 @@ namespace UnitTestProject
                 { 1, 1, 0, 0, 0 },
             };
             var received = new FindNumberAmazonGoStores().NumberAmazonGoStores(5, 5, grid);
-            Assert.IsTrue(received == 2);
+            Assert.IsTrue(received == 3);
         }
     }
 }
