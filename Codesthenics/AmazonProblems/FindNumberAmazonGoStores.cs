@@ -9,105 +9,143 @@ namespace Codesthenics
 {
     public class FindNumberAmazonGoStores
     {
+        private int _rows;
+        private int _columns;
+        private int[,] _grid;
+
         //Diagonals opposited elements are different cluster
-        public int NumberAmazonGoStores(int rows, int column, int[,] grid)
+        public int NumberAmazonGoStores(int rows, int columns, int[,] grid)
         {
+            _rows = rows;
+            _columns = columns;
+            _grid = grid;
+
+            //Console.WriteLine("_rows _columns " + " " + _rows + " " + columns);
+
             var returnValue = 0;
 
-            if (rows <= 0 || column <= 0)
-                return returnValue;
+            var queue = new Queue<Cell>();
+            var visited = new HashSet<string>();
+            queue.Enqueue(new Cell(0, 0));
 
-            bool clusterPossible = false;
-            bool clusterFound = false;
-
-            for (int i = 0; i < rows; i++)
+            while (queue.Count > 0)
             {
-                for (int j = 0; j < column; j++)
+                var cellToProcess = queue.Dequeue();
+
+                if (grid[cellToProcess.RowId, cellToProcess.ColId] == 1)
                 {
-                    if (grid[i, j] == 1 && clusterPossible == false)
+                    //Console.WriteLine("DFS RowId ColId " + " " + cellToProcess.RowId + " " + cellToProcess.ColId);
+                    if (IsAnIsland(cellToProcess.RowId, cellToProcess.ColId, visited, queue))
                     {
-                        clusterPossible = true;
+                        returnValue++;
                     }
-                    else if (grid[i, j] == 1 && clusterPossible == true)
+                }
+                else
+                {
+                    visited.Add(cellToProcess.CellUniqueId);
+                    for (int x = cellToProcess.RowId - 1; x <= cellToProcess.RowId + 1; x++)
                     {
-                        clusterFound = true;
-                    }
-                    else if (grid[i, j] == 0 && clusterFound == true)
-                    {
-                        returnValue += 1;
-                        clusterPossible = false;
-                        clusterFound = false;
-                    }
-                    else if (grid[i, j] == 0)
-                    {
-                        clusterPossible = false;
-                        clusterFound = false;
-                    }
-
-                    //if (grid[i, j] == 1  && clusterPossible == false)
-                    //{
-                    //    if (j + 1 < column && grid[i, j + 1] == 0)
-                    //    {
-
-                    //    }
-                    //    else if ((j == column - 1) && )
-                    //    {
-
-                    //    }
-                    //}
-
-                    if (grid[i, j] == 1 && (j + 1 < column && grid[i, j + 1] == 0) && clusterPossible == false)
-                    {
-                        if (grid[i + 1, j + 1] == 1)
+                        for (int y = cellToProcess.ColId - 1; y <= cellToProcess.ColId + 1; y++)
                         {
-                            returnValue++;
-                            clusterPossible = false;
-                            clusterFound = false;
+                            var newCell = new Cell(x, y);
+                            if (IsValidCell(newCell.RowId, newCell.ColId) && !visited.Contains(newCell.CellUniqueId))
+                            {
+                                //Console.WriteLine("BFS RowId ColId " + " " + newCell.RowId + " " + newCell.ColId);
+                                queue.Enqueue(newCell);
+                            }
                         }
-                    }
-                    else if (grid[i, j] == 1 && (j == column - 1) && clusterPossible == false)
-                    {
-                        if (i == 0 && grid[i + 1, j - 1] == 1)
-                        {
-                            returnValue++;
-                            clusterPossible = false;
-                            clusterFound = false;
-                        }
-                        else if (i == rows - 1 && grid[i + 1, j - 1] == 1)
-                        {
-
-                        }
-
-                    }
-
-
-
-                    if ((grid[i, j] == 1) &&
-                    (
-                    (
-                        (((j + 1 < column) && grid[i, j + 1] == 0) || ((j == column) && (i + 1 < rows) && grid[i + 1, 0] == 0)) /*ensuring that the cell is not part of any cluster*/
-                            &&
-                        ((i - 1 >= 0) && (j - 1 >= 0) && grid[i - 1, j - 1] == 1)
-                    )  /*is diagonal?*/
-                    ||
-                    (
-                        (i == rows - 1 && j == column - 1 && grid[i - 1, j - 1] == 1)
-                        ||
-                        (i == 0 && j == 0 && grid[i + 1, j + 1] == 1)
-                    ) /*first or last cell*/
-                    ))
-                    {
-                        //diagonal    
-                        returnValue += 1;
-                        clusterPossible = false;
-                        clusterFound = false;
                     }
                 }
             }
 
             return returnValue;
-
         }
 
+        private bool CheckForDiagonals(int rowId, int colId)
+        {
+            if ((IsValidCell(rowId - 1, colId - 1) && _grid[rowId - 1, colId - 1] == 1) ||
+                (IsValidCell(rowId - 1, colId + 1) && _grid[rowId - 1, colId + 1] == 1) ||
+                (IsValidCell(rowId + 1, colId - 1) && _grid[rowId + 1, colId - 1] == 1) ||
+                (IsValidCell(rowId + 1, colId + 1) && _grid[rowId + 1, colId + 1] == 1))
+                return true;
+
+            return false;
+        }
+
+        private bool IsAnIsland(int rowId, int colId, HashSet<string> visited, Queue<Cell> queue)
+        {
+            bool returnValue = false;
+            var incomingCell = new Cell(rowId, colId);
+            if (visited.Contains(incomingCell.CellUniqueId))
+                return returnValue;
+          
+            visited.Add(incomingCell.CellUniqueId);
+            Console.WriteLine("Visited in IsAnIsland" + " "+ incomingCell.CellUniqueId);
+
+            for (int x = rowId - 1; x <= rowId + 1; x++)
+            {
+                for (int y = colId - 1; y <= colId + 1; y++)
+                {
+                    var newCell = new Cell(x, y);
+                    if (IsValidCell(newCell.RowId, newCell.ColId) &&
+                        !IsDiagonal(incomingCell.RowId, incomingCell.ColId, newCell.RowId, newCell.ColId)
+                        && newCell.CellUniqueId != incomingCell.CellUniqueId)
+                    {
+                        if (_grid[newCell.RowId, newCell.ColId] == 0)
+                        {
+                            if (!visited.Contains(newCell.CellUniqueId))
+                            {
+                                //Console.WriteLine("DFS RowId ColId " + " " + newCell.RowId + " " + newCell.ColId);
+                                queue.Enqueue(new Cell(x, y));
+                            }
+                        }
+                        else
+                        {
+                            IsAnIsland(x, y, visited, queue);
+                            //Console.WriteLine("IsAnIsland DFS RowId ColId " + " " + newCell.RowId + " " + newCell.ColId);
+                            returnValue = true;
+                        }
+                    }
+                }
+            }
+
+            if (returnValue == false && (CheckForDiagonals(incomingCell.RowId, incomingCell.ColId)))
+                returnValue = true;
+
+            return returnValue;
+        }
+
+        private bool IsValidCell(int rowId, int colId)
+        {
+            if (rowId < 0 || rowId > (_rows - 1) || colId < 0 || colId > (_columns - 1))
+                return false;
+
+            return true;
+        }
+
+        private bool IsDiagonal(int originalCellRowId, int originalCellColId, int newCellRowId, int newCellColId)
+        {
+            if ((newCellRowId == originalCellRowId - 1 && newCellColId == originalCellColId + 1) ||
+                (newCellRowId == originalCellRowId - 1 && newCellColId == originalCellColId - 1) ||
+                (newCellRowId == originalCellRowId + 1 && newCellColId == originalCellColId + 1) ||
+                (newCellRowId == originalCellRowId + 1 && newCellColId == originalCellColId - 1))
+                return true;
+
+            return false;
+        }
+
+        public class Cell
+        {
+            public Cell(int rowId, int colId)
+            {
+                RowId = rowId;
+                ColId = colId;
+            }
+
+            public string CellUniqueId => RowId.ToString() + ColId.ToString();
+
+            public int RowId;
+            public int ColId;
+        }
     }
 }

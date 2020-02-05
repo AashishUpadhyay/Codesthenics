@@ -33,7 +33,8 @@ namespace UnitTestProject
                 { 0, 0, 0, 0, 0, 0, 1 },
 
             };
-            Assert.IsTrue(new FindNumberAmazonGoStores().NumberAmazonGoStores(7, 7, grid) == 7);
+            var received = new FindNumberAmazonGoStores().NumberAmazonGoStores(7, 7, grid);
+            Assert.IsTrue(received == 7);
         }
 
         [TestMethod]
@@ -47,6 +48,20 @@ namespace UnitTestProject
                 { 1, 1, 1, 1 }
             };
             var received = new FindNumberAmazonGoStores().NumberAmazonGoStores(5, 4, grid);
+            Assert.IsTrue(received == 3);
+        }
+
+        [TestMethod]
+        public void Test4()
+        {
+            var grid = new int[,] {
+                { 0, 1, 1, 1, 0 },
+                { 0, 1, 1, 0, 0 },
+                { 0, 0, 0, 1, 0 },
+                { 1, 0, 1, 1, 0 },
+                { 1, 1, 0, 0, 0 },
+            };
+            var received = new FindNumberAmazonGoStores().NumberAmazonGoStores(5, 5, grid);
             Assert.IsTrue(received == 2);
         }
     }

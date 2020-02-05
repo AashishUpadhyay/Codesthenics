@@ -207,21 +207,31 @@ namespace Codesthenics
             //     new GraphCellCoordinates(2,2)
             // };\
 
-            var graph = new int[,] {
-                { 1, 1, 1, 1, 0 },
-                { 0, 1, 1, 1, 0 },
-                { 0, 1, 1, 1, 0 },
-                { 0, 1, 1, 1, 0 },
-                { 0, 1, 9, 1, 0 } };
+            //var graph = new int[,] {
+            //    { 1, 1, 1, 1, 0 },
+            //    { 0, 1, 1, 1, 0 },
+            //    { 0, 1, 1, 1, 0 },
+            //    { 0, 1, 1, 1, 0 },
+            //    { 0, 1, 9, 1, 0 } };
 
             //var graph = new int[,] {
             //    { 1, 1, 1 },
             //    { 0, 1, 1 },
             //    { 0, 9, 1} };
 
-            var output = new DemolitionRobotProblem().FindPathUsingBFS(graph, 5, 5);
+            //var output = new DemolitionRobotProblem().FindPathUsingBFS(graph, 5, 5);
             //var output = DemolitionRobotProblem.FindPath(graph, 3, 3);
-            Console.WriteLine(output);
+
+            var grid = new int[,] {
+                { 0, 1, 1, 1, 0 },
+                { 0, 1, 1, 0, 0 },
+                { 0, 0, 0, 1, 0 },
+                { 0, 0, 1, 1, 0 },
+                { 0, 0, 0, 0, 0 },
+            };
+            var received = new FindNumberAmazonGoStores().NumberAmazonGoStores(5, 5, grid);
+
+            Console.WriteLine(received);
             Console.Read();
         }
     }
