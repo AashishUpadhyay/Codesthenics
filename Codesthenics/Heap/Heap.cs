@@ -10,11 +10,13 @@ namespace Codesthenics
     {
         private IList<T> _heap = new List<T>();
         private readonly IComparer<T> _comparer;
+        private bool _orderByIncreasing;
 
         public int Length => _heap.Count;
 
-        public Heap()
+        public Heap(bool orderByIncreasing = true)
         {
+            _orderByIncreasing = orderByIncreasing;
             _comparer = Comparer<T>.Default;
         }
 
@@ -35,7 +37,7 @@ namespace Codesthenics
                 return;
 
             int parentIndex = GetParentIndex(inputIndex);
-            if (_comparer.Compare(_heap[parentIndex], _heap[inputIndex]) > 0)
+            if (swapValues(_heap[parentIndex], _heap[inputIndex]))
             {
                 Exchange(parentIndex, inputIndex);
                 HeapifyEndToBeginning(parentIndex);
@@ -59,13 +61,13 @@ namespace Codesthenics
             var smallerIndex = inputIndex;
 
             if (leftIndex < _heap.Count
-                && _comparer.Compare(_heap[inputIndex], _heap[leftIndex]) > 0)
+                && swapValues(_heap[inputIndex], _heap[leftIndex]))
             {
                 smallerIndex = leftIndex;
             }
 
             if (rightIndex < _heap.Count
-                && _comparer.Compare(_heap[smallerIndex], _heap[rightIndex]) > 0)
+                && swapValues(_heap[smallerIndex], _heap[rightIndex]))
             {
                 smallerIndex = rightIndex;
             }
@@ -102,6 +104,18 @@ namespace Codesthenics
         public IList<T> GetAll()
         {
             return _heap;
+        }
+
+        public bool swapValues(T x, T y)
+        {
+            if(_orderByIncreasing)
+            {
+                return _comparer.Compare(x, y) > 0;
+            }
+            else
+            {
+                return _comparer.Compare(x, y) < 0;
+            }
         }
     }
 }
