@@ -10,14 +10,17 @@ namespace Codesthenics
     {
         private IList<T> _heap = new List<T>();
         private readonly IComparer<T> _comparer;
-        private bool _orderByIncreasing;
 
         public int Length => _heap.Count;
 
-        public Heap(bool orderByIncreasing = true)
+        public Heap()
         {
-            _orderByIncreasing = orderByIncreasing;
             _comparer = Comparer<T>.Default;
+        }
+
+        public Heap(Comparer<T> comparer)
+        {
+            _comparer = comparer;
         }
 
         public Heap(IList<T> input) : this()
@@ -108,14 +111,7 @@ namespace Codesthenics
 
         public bool swapValues(T x, T y)
         {
-            if(_orderByIncreasing)
-            {
-                return _comparer.Compare(x, y) > 0;
-            }
-            else
-            {
-                return _comparer.Compare(x, y) < 0;
-            }
+           return _comparer.Compare(x, y) > 0;
         }
     }
 }

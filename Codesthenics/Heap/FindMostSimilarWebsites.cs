@@ -25,7 +25,15 @@ namespace Codesthenics
             var jaccardIndexWebSiteTupleDictionary = new Dictionary<decimal, IList<Tuple<string, string>>>();
 
             var keys = websiteUserDictionary.Keys.ToList();
-            var heap = new Heap<decimal>(false);
+            var heap = new Heap<decimal>(Comparer<decimal>.Create((decimal x, decimal y)=>
+            {
+                if (x == y)
+                    return 0;
+                else if (x > y)
+                    return -1;
+                else
+                    return 1;
+            }));
 
             for (int i = 0; i < keys.Count - 1; i++)
             {

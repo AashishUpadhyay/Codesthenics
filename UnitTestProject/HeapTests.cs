@@ -50,7 +50,7 @@ namespace UnitTestProject
         public void DecreasingHeapPushTest()
         {
             var input = new int[] { 0, 3, 4, 9, 9, 6, 5 };
-            var heap = new Heap<int>(false);
+            var heap = new Heap<int>(Comparer<int>.Create(MaxHeapComparer));
 
             foreach (var item in input)
                 heap.Push(item);
@@ -66,7 +66,7 @@ namespace UnitTestProject
         public void DecreasingHeapPopTest()
         {
             var input = new int[] { 0, 3, 4, 9, 9, 6, 5 };
-            var heap = new Heap<int>(false);
+            var heap = new Heap<int>(Comparer<int>.Create(MaxHeapComparer));
 
             foreach (var item in input)
                 heap.Push(item);
@@ -79,6 +79,16 @@ namespace UnitTestProject
             Assert.IsTrue(heap.Pop() == 3);
             Assert.IsTrue(heap.Pop() == 0);
             Assert.IsTrue(heap.Length == 0);
+        }
+
+        private int MaxHeapComparer(int x, int y)
+        {
+            if (x == y)
+                return 0;
+            else if (x > y)
+                return -1;
+            else
+                return 1;
         }
     }
 }
