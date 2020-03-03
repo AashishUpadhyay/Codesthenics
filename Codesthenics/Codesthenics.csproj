@@ -76,6 +76,7 @@
     <Compile Include="Heap\ComputingRunningMedian.cs" />
     <Compile Include="Heap\FindMostSimilarWebsites.cs" />
     <Compile Include="Heap\Heap.cs" />
+    <Compile Include="Heap\HuffmanEncoding.cs" />
     <Compile Include="LinkedList\FindIntersectingNode.cs" />
     <Compile Include="LinkedList\RearrangeListToAlternateLowAndHigh.cs" />
     <Compile Include="LinkedList\AddTwoLinkedListThatRepresentNumber.cs" />

@@ -64,6 +64,7 @@
     <Compile Include="FindFloorCeilingInBinarySearchTreeTests.cs" />
     <Compile Include="FindNumberAmazonGoStoresTests.cs" />
     <Compile Include="FindIndexWithSumTests.cs" />
+    <Compile Include="HuffmanTreeTests.cs" />
     <Compile Include="UnivalTreeTests.cs" />
     <Compile Include="LruCacheTests.cs" />
     <Compile Include="LinkedListTests.cs" />
