@@ -73,6 +73,7 @@
     <Compile Include="Graph\GraphAM.cs" />
     <Compile Include="Graph\GraphCheckIfCycleExists.cs" />
     <Compile Include="Graph\GraphAJ.cs" />
+    <Compile Include="Graph\RemoveEdgesToCreateEvenTrees.cs" />
     <Compile Include="Heap\ComputingRunningMedian.cs" />
     <Compile Include="Heap\FindMostSimilarWebsites.cs" />
     <Compile Include="Heap\Heap.cs" />
