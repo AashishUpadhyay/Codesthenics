@@ -70,6 +70,7 @@
     <Compile Include="Arrays\FindIndexWithSum.cs" />
     <Compile Include="CalculateMaximumProfitToBeEarnedFromStockPricesBySellingMultipleTimes.cs" />
     <Compile Include="CutBrickWall.cs" />
+    <Compile Include="Graph\ChooseStepwordChain.cs" />
     <Compile Include="Graph\GraphAM.cs" />
     <Compile Include="Graph\GraphCheckIfCycleExists.cs" />
     <Compile Include="Graph\GraphAJ.cs" />
