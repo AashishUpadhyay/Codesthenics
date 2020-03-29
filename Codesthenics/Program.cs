@@ -222,16 +222,26 @@ namespace Codesthenics
             //var output = new DemolitionRobotProblem().FindPathUsingBFS(graph, 5, 5);
             //var output = DemolitionRobotProblem.FindPath(graph, 3, 3);
 
-            var grid = new int[,] {
-                { 0, 1, 1, 1, 0 },
-                { 0, 1, 1, 0, 0 },
-                { 0, 0, 0, 1, 0 },
-                { 0, 0, 1, 1, 0 },
-                { 0, 0, 0, 0, 0 },
-            };
-            var received = new FindNumberAmazonGoStores().NumberAmazonGoStores(5, 5, grid);
+            //var grid = new int[,] {
+            //    { 0, 1, 1, 1, 0 },
+            //    { 0, 1, 1, 0, 0 },
+            //    { 0, 0, 0, 1, 0 },
+            //    { 0, 0, 1, 1, 0 },
+            //    { 0, 0, 0, 0, 0 },
+            //};
+            //var received = new FindNumberAmazonGoStores().NumberAmazonGoStores(5, 5, grid);
+            //Console.WriteLine(received);
 
-            Console.WriteLine(received);
+            var topologicalSort = new TopologicalSort();
+            var returnedValue = topologicalSort.Sort(new Dictionary<string, IList<string>>()
+            {
+                {"A", new List<string>() {"B","C" } },
+                {"B", new List<string>() {"C","D" } },
+                {"D", new List<string>() {"D" } },
+                {"C", new List<string>() {"F","E" } },
+                {"E", new List<string>() {"F" } },
+                {"F", new List<string>()},
+            });
             Console.Read();
         }
     }

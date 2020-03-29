@@ -61,6 +61,7 @@
     <Compile Include="GraphTests.cs" />
     <Compile Include="HeapTests.cs" />
     <Compile Include="FindMostSimilarWebsitesTests.cs" />
+    <Compile Include="TopologicalSortTests.cs" />
     <Compile Include="TrieTests.cs" />
     <Compile Include="TreeLevelWithMinimumSumTests.cs" />
     <Compile Include="FindFloorCeilingInBinarySearchTreeTests.cs" />
