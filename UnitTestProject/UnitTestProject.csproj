@@ -68,6 +68,7 @@
     <Compile Include="FindNumberAmazonGoStoresTests.cs" />
     <Compile Include="FindIndexWithSumTests.cs" />
     <Compile Include="HuffmanTreeTests.cs" />
+    <Compile Include="NetworkDelayTimeTests.cs" />
     <Compile Include="UnivalTreeTests.cs" />
     <Compile Include="ChooseStepwordChainTests.cs" />
     <Compile Include="LruCacheTests.cs" />

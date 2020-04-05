@@ -232,17 +232,21 @@ namespace Codesthenics
             //var received = new FindNumberAmazonGoStores().NumberAmazonGoStores(5, 5, grid);
             //Console.WriteLine(received);
 
-            var topologicalSort = new TopologicalSort();
-            var returnedValue = topologicalSort.Sort(new Dictionary<string, IList<string>>()
-            {
-                {"A", new List<string>() {"B","C" } },
-                {"B", new List<string>() {"C","D" } },
-                {"D", new List<string>() {"D" } },
-                {"C", new List<string>() {"F","E" } },
-                {"E", new List<string>() {"F" } },
-                {"F", new List<string>()},
-            });
+            //var topologicalSort = new TopologicalSort();
+            //var returnedValue = topologicalSort.Sort(new Dictionary<string, IList<string>>()
+            //{
+            //    {"A", new List<string>() {"B","C" } },
+            //    {"B", new List<string>() {"C","D" } },
+            //    {"D", new List<string>() {"D" } },
+            //    {"C", new List<string>() {"F","E" } },
+            //    {"E", new List<string>() {"F" } },
+            //    {"F", new List<string>()},
+            //});
+
+
             Console.Read();
         }
+
+        
     }
 }
