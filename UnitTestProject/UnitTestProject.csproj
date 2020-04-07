@@ -69,6 +69,7 @@
     <Compile Include="FindIndexWithSumTests.cs" />
     <Compile Include="HuffmanTreeTests.cs" />
     <Compile Include="NetworkDelayTimeTests.cs" />
+    <Compile Include="ValidateBinarySearchTreeTests.cs" />
     <Compile Include="UnivalTreeTests.cs" />
     <Compile Include="ChooseStepwordChainTests.cs" />
     <Compile Include="LruCacheTests.cs" />

@@ -225,7 +225,6 @@ namespace Codesthenics
             return isLeftSideEqual && isRightSideEqual && (expected != null && received != null && expected.Value.Equals(received.Value));
         }
 
-
         public static bool IsBinarySearchTree(TreeNode<int> node)
         {
             if (node.LeftChild == null && node.RightChild == null)
@@ -249,6 +248,55 @@ namespace Codesthenics
             }
 
             return leftSide && rightSide;
+        }
+
+        public static TreeNode<int> BuildTreeFromArray(int?[] values)
+        {
+            var dictionary = new Dictionary<int, TreeNode<int>>();
+            for (int i = values.Length - 1; i >= 1; i--)
+            {
+                if (values[i] == null)
+                {
+                    continue;
+                }
+
+                var parentIndex = (i - 1) / 2;
+                TreeNode<int> parentNode;
+                if (dictionary.ContainsKey(parentIndex))
+                {
+                    parentNode = dictionary[parentIndex];
+                }
+                else
+                {
+                    if (values[parentIndex] == null)
+                        throw new InvalidOperationException();
+
+                    parentNode = new TreeNode<int>()
+                    {
+                        Value = values[parentIndex].Value
+                    };
+                    dictionary.Add(parentIndex, parentNode);
+                }
+
+                TreeNode<int> childNode;
+                if (dictionary.ContainsKey(i))
+                {
+                    childNode = dictionary[i];
+                }
+                else
+                    childNode = new TreeNode<int>()
+                    {
+                        Value = values[i].Value
+                    };
+
+                if (i % 2 == 0)
+                    parentNode.RightChild = childNode;
+                else
+                    parentNode.LeftChild = childNode;
+
+            }
+
+            return dictionary[0];
         }
     }
 }

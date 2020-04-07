@@ -24,5 +24,6 @@ namespace Codesthenics
         private T _fieldValue;
         public TreeNode<T> LeftChild { get; set; }
         public TreeNode<T> RightChild { get; set; }
+
     }
 }
