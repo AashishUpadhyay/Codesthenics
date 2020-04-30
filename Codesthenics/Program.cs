@@ -243,10 +243,147 @@ namespace Codesthenics
             //    {"F", new List<string>()},
             //});
 
+            //var linkedList = new LinkedList<int>();
+            //var node = linkedList.AddFirst(1);
+
+            CutOffTree(new List<List<int>>()
+            {
+                new List<int>(){1,6,5},
+                new List<int>(){4,2,3}
+            });
 
             Console.Read();
         }
 
-        
+        private static int nextRowIndex = 0;
+        private static int nextColIndex = 0;
+        private static int noOfRows = 0;
+        private static int noOfCols = 0;
+
+        public static int CutOffTree(List<List<int>> forest)
+        {
+            noOfRows = forest.Count();
+            if (noOfRows > 0)
+                noOfCols = forest[0].Count();
+
+            var listOfTrees = new List<int>();
+            forest.ToList().ForEach(u =>
+            {
+                u.ToList().ForEach(v =>
+                {
+                    if (v > 0)
+                        listOfTrees.Add(v);
+                });
+            });
+
+            var returnValue = 0;
+            var listOfTreesSorted = listOfTrees.OrderBy(u => u).ToList();
+            foreach (var item in listOfTreesSorted)
+            {
+                var visited = new HashSet<string>();
+                var stepCount = DFS(item, nextRowIndex, nextColIndex, forest, visited);
+                if (stepCount < 0)
+                {
+                    returnValue = -1;
+                    break;
+                }
+                else
+                {
+                    returnValue += stepCount;
+                }
+            }
+
+            return returnValue;
+        }
+
+        private static int DFS(int item, int ri, int ci, List<List<int>> forest, HashSet<string> visited)
+        {
+            var incomingCell = new Cell(ri, ci);
+            if (visited.Contains(incomingCell.CellId))
+            {
+                return -1;
+            }
+
+            if (forest[ri][ci] == item)
+            {
+                nextRowIndex = ri;
+                nextColIndex = ci;
+                return 0;
+            }
+
+            visited.Add(incomingCell.CellId);
+
+            var returnValue = -1;
+            List<int> steps = new List<int>();
+
+            var stepCount = 0;
+            if (IsValidIndex(ri - 1, ci))
+            {
+                stepCount = DFS(item, ri - 1, ci, forest, visited);
+                if (stepCount >= 0)
+                    steps.Add(stepCount);
+            }
+
+            if (IsValidIndex(ri + 1, ci))
+            {
+                stepCount = DFS(item, ri + 1, ci, forest, visited);
+                if (stepCount >= 0)
+                    steps.Add(stepCount);
+            }
+
+            if (IsValidIndex(ri, ci - 1))
+            {
+                stepCount = DFS(item, ri, ci - 1, forest, visited);
+                if (stepCount >= 0)
+                    steps.Add(stepCount);
+            }
+
+            if (IsValidIndex(ri, ci + 1))
+            {
+                stepCount = DFS(item, ri, ci + 1, forest, visited);
+                if (stepCount >= 0)
+                    steps.Add(stepCount);
+            }
+
+            if (steps.Count() > 0)
+                returnValue = steps.Min() + 1;
+
+            return returnValue;
+        }
+
+        private static bool IsValidIndex(int ri, int ci)
+        {
+            if (ri < 0 || ci < 0 || ri >= noOfRows || ci >= noOfCols)
+                return false;
+
+            return true;
+        }
+
+        private static bool IsDiagonal(int ri, int ci, int nri, int nci)
+        {
+            if (
+                (nri == ri - 1 && nci == ci - 1) ||
+                (nri == ri + 1 && nci == ci - 1) ||
+                (nri == ri - 1 && nci == ci + 1) ||
+                (nri == ri + 1 && nci == ci + 1)
+              )
+                return true;
+
+            return false;
+        }
+
+        public struct Cell
+        {
+            public int RowId;
+            public int ColId;
+
+            public string CellId => RowId.ToString() + "_" + ColId.ToString();
+
+            public Cell(int rowId, int colId)
+            {
+                RowId = rowId;
+                ColId = colId;
+            }
+        }
     }
 }

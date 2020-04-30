@@ -63,12 +63,14 @@
     <Compile Include="FindMostSimilarWebsitesTests.cs" />
     <Compile Include="TopologicalSortTests.cs" />
     <Compile Include="TrieTests.cs" />
+    <Compile Include="FenwickTreeTests.cs" />
     <Compile Include="TreeLevelWithMinimumSumTests.cs" />
     <Compile Include="FindFloorCeilingInBinarySearchTreeTests.cs" />
     <Compile Include="FindNumberAmazonGoStoresTests.cs" />
     <Compile Include="FindIndexWithSumTests.cs" />
     <Compile Include="HuffmanTreeTests.cs" />
     <Compile Include="NetworkDelayTimeTests.cs" />
+    <Compile Include="ZigzagLevelOrderTraversalTests.cs" />
     <Compile Include="ValidateBinarySearchTreeTests.cs" />
     <Compile Include="UnivalTreeTests.cs" />
     <Compile Include="ChooseStepwordChainTests.cs" />

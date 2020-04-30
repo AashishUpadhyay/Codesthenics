@@ -99,13 +99,9 @@ namespace Codesthenics
         private bool isBSTHelper(TreeNode<int> node, int lower_limit, int upper_limit)
         {
             if (node == null)
-            {
                 return true;
-            }
             if (node.Value <= lower_limit || upper_limit <= node.Value)
-            {
                 return false;
-            }
             return isBSTHelper(node.LeftChild, lower_limit, node.Value) && isBSTHelper(node.RightChild, node.Value, upper_limit);
         }
 
