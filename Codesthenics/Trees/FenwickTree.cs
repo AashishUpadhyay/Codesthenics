@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace Codesthenics
 {
+    /// <summary>
+    /// Reference 
+    /// https://notes.tweakblogs.net/blog/9835/fenwick-trees-demystified.html
+    /// </summary>
     public class FenwickTree
     {
         public int[] Create(int[] input)
