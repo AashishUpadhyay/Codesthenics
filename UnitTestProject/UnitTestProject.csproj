@@ -62,6 +62,7 @@
     <Compile Include="HeapTests.cs" />
     <Compile Include="FindMostSimilarWebsitesTests.cs" />
     <Compile Include="TopologicalSortTests.cs" />
+    <Compile Include="DisjointSetTests.cs" />
     <Compile Include="TrieTests.cs" />
     <Compile Include="FenwickTreeTests.cs" />
     <Compile Include="TreeLevelWithMinimumSumTests.cs" />

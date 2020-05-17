@@ -78,6 +78,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdvancedDataStructures\DisjointSet.cs" />
     <Compile Include="Algorithms\CountingSort.cs" />
     <Compile Include="Algorithms\RadixSort.cs" />
     <Compile Include="Algorithms\Quicksort.cs" />
@@ -131,7 +132,7 @@
     <Compile Include="TODO\MergeSort.cs" />
     <Compile Include="TODO\CounterSortForNegativeIntegers.cs" />
     <Compile Include="Trees\BuildAllBinarySearchTrees.cs" />
-    <Compile Include="Trees\FenwickTree.cs" />
+    <Compile Include="AdvancedDataStructures\FenwickTree.cs" />
     <Compile Include="Trees\FindFloorCeilingInBinarySearchTree.cs" />
     <Compile Include="Trees\BinarySearchTree.cs" />
     <Compile Include="Trees\TreeLevelWithMinimumSum.cs" />
