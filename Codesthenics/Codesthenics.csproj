@@ -84,6 +84,7 @@
     <Compile Include="Algorithms\Quicksort.cs" />
     <Compile Include="AmazonProblems\FindNumberAmazonGoStores.cs" />
     <Compile Include="Arrays\FindIndexWithSum.cs" />
+    <Compile Include="BrailleEncoder.cs" />
     <Compile Include="CalculateMaximumProfitToBeEarnedFromStockPricesBySellingMultipleTimes.cs" />
     <Compile Include="CutBrickWall.cs" />
     <Compile Include="Graph\BeatSnakesAndLadders.cs" />
@@ -103,6 +104,7 @@
     <Compile Include="LinkedList\AddTwoLinkedListThatRepresentNumber.cs" />
     <Compile Include="LinkedList\LinkedList.cs" />
     <Compile Include="LruCache\LruCache.cs" />
+    <Compile Include="SortElevatorVersions.cs" />
     <Compile Include="Stack\ReconstructArrayWithPlusAndMinusSigns.cs" />
     <Compile Include="Stack\MaximumOfEveryKIntegers.cs" />
     <Compile Include="String\CalculateApplesBetweenPeopleWhenTotalApplesAndDifferenceOfAppleIsKnownTheInputIsReallyHuge.cs" />
