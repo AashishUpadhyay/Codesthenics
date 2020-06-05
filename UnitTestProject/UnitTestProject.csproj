@@ -73,6 +73,7 @@
     <Compile Include="NetworkDelayTimeTests.cs" />
     <Compile Include="BrailleEncoderTest.cs" />
     <Compile Include="SortElevatorVersionsTest.cs" />
+    <Compile Include="FindLargestNumberDivisibleByThreeTests.cs" />
     <Compile Include="ZigzagLevelOrderTraversalTests.cs" />
     <Compile Include="ValidateBinarySearchTreeTests.cs" />
     <Compile Include="UnivalTreeTests.cs" />
