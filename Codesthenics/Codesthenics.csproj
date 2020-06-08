@@ -105,6 +105,7 @@
     <Compile Include="LinkedList\LinkedList.cs" />
     <Compile Include="LruCache\LruCache.cs" />
     <Compile Include="Recursion\FindLargestNumberDivisibleByThree.cs" />
+    <Compile Include="Recursion\TowerOfHanoi.cs" />
     <Compile Include="SortElevatorVersions.cs" />
     <Compile Include="Stack\ReconstructArrayWithPlusAndMinusSigns.cs" />
     <Compile Include="Stack\MaximumOfEveryKIntegers.cs" />
