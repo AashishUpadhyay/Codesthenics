@@ -57,6 +57,7 @@
     <Compile Include="FindPairWithMaxXORTests.cs" />
     <Compile Include="ComputingRunningMedianTests.cs" />
     <Compile Include="BeatSnakesAndLaddersTests.cs" />
+    <Compile Include="RegexMatchTests.cs" />
     <Compile Include="TowerOfHanoiTests.cs" />
     <Compile Include="RemoveEdgesToCreateEvenTreesTests.cs" />
     <Compile Include="GraphTests.cs" />
