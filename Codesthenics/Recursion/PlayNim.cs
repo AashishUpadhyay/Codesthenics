@@ -21,10 +21,11 @@ namespace Codesthenics
 					preList.Add(nums[i] - j);
 					preList.AddRange(nums.Skip(i + 1).Take(nums.Length - (i + 1)));
 					if (!CanWin(preList.ToArray()))
+					{
 						return true;
+					}
 				}
 			}
-
 			return false;
 		}
 	}

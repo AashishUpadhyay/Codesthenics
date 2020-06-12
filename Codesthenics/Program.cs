@@ -264,6 +264,9 @@ namespace Codesthenics
             //esigStrategy.Process();
 
             //Console.Read();
+
+            var playNim = new PlayNim();
+            playNim.CanWin(new int[] { 4, 5, 6 });
         }
     }
 }
