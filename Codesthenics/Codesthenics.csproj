@@ -88,6 +88,7 @@
     <Compile Include="CalculateMaximumProfitToBeEarnedFromStockPricesBySellingMultipleTimes.cs" />
     <Compile Include="CutBrickWall.cs" />
     <Compile Include="DynamicProgramming\CoinWays.cs" />
+    <Compile Include="DynamicProgramming\NumberOfWaysToDecodeString.cs" />
     <Compile Include="Graph\BeatSnakesAndLadders.cs" />
     <Compile Include="Graph\ChooseStepwordChain.cs" />
     <Compile Include="Graph\GraphAM.cs" />
