@@ -265,8 +265,12 @@ namespace Codesthenics
 
             //Console.Read();
 
-            var playNim = new PlayNim();
-            playNim.CanWin(new int[] { 4, 5, 6 });
+            //var playNim = new PlayNim();
+            //playNim.CanWin(new int[] { 4, 5, 6 });
+
+            var stepsToOne = new StepsToOne();
+            var result = stepsToOne.Calculate("305");
+            Console.Read();
         }
     }
 }

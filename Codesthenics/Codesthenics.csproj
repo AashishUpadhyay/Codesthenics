@@ -113,6 +113,7 @@
     <Compile Include="SortElevatorVersions.cs" />
     <Compile Include="Stack\ReconstructArrayWithPlusAndMinusSigns.cs" />
     <Compile Include="Stack\MaximumOfEveryKIntegers.cs" />
+    <Compile Include="StepsToOne.cs" />
     <Compile Include="String\CalculateApplesBetweenPeopleWhenTotalApplesAndDifferenceOfAppleIsKnownTheInputIsReallyHuge.cs" />
     <Compile Include="String\CheckIfStringsHaveCommonCharacters.cs" />
     <Compile Include="String\LettersInZigZagForm.cs" />
