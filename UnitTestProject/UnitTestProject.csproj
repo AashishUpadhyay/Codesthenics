@@ -89,7 +89,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Codesthenics\Codesthenics.csproj">
+    <ProjectReference Include="..\src\Codesthenics.csproj">
       <Project>{2e33401f-689c-4934-bff7-5a063a69c08c}</Project>
       <Name>Codesthenics</Name>
     </ProjectReference>
