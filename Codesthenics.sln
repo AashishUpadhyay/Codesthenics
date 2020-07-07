@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Codesthenics", "Codesthenics\Codesthenics.csproj", "{2E33401F-689C-4934-BFF7-5A063A69C08C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Codesthenics", "src\Codesthenics.csproj", "{2E33401F-689C-4934-BFF7-5A063A69C08C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject", "UnitTestProject\UnitTestProject.csproj", "{1F7AF651-80B4-494C-92BC-9F54D49F8FB1}"
 EndProject
