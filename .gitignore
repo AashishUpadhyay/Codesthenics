@@ -1,6 +1,6 @@
 .vs/
-Codesthenics/bin/
-Codesthenics/obj/
+src/bin/
+src/obj/
 UnitTestProject/bin/
 UnitTestProject/obj/
 packages/
