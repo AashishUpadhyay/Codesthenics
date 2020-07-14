@@ -84,6 +84,7 @@
     <Compile Include="Algorithms\Quicksort.cs" />
     <Compile Include="AmazonProblems\FindNumberAmazonGoStores.cs" />
     <Compile Include="Arrays\FindIndexWithSum.cs" />
+    <Compile Include="Backtracking\ReconstructItinerary.cs" />
     <Compile Include="BrailleEncoder.cs" />
     <Compile Include="CalculateMaximumProfitToBeEarnedFromStockPricesBySellingMultipleTimes.cs" />
     <Compile Include="CutBrickWall.cs" />

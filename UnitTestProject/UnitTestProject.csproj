@@ -59,6 +59,7 @@
     <Compile Include="ComputingRunningMedianTests.cs" />
     <Compile Include="BeatSnakesAndLaddersTests.cs" />
     <Compile Include="CoinWaysTest.cs" />
+    <Compile Include="ReconstructItineraryTests.cs" />
     <Compile Include="PlayNimTests.cs" />
     <Compile Include="RegexMatchTests.cs" />
     <Compile Include="TowerOfHanoiTests.cs" />
