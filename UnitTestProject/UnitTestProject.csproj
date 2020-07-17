@@ -59,6 +59,7 @@
     <Compile Include="ComputingRunningMedianTests.cs" />
     <Compile Include="BeatSnakesAndLaddersTests.cs" />
     <Compile Include="CoinWaysTest.cs" />
+    <Compile Include="AndroidPatternTests.cs" />
     <Compile Include="SudokuSolverTests.cs" />
     <Compile Include="ReconstructItineraryTests.cs" />
     <Compile Include="PlayNimTests.cs" />

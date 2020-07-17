@@ -84,6 +84,7 @@
     <Compile Include="Algorithms\Quicksort.cs" />
     <Compile Include="AmazonProblems\FindNumberAmazonGoStores.cs" />
     <Compile Include="Arrays\FindIndexWithSum.cs" />
+    <Compile Include="Backtracking\AndroidPattern.cs" />
     <Compile Include="Backtracking\ReconstructItinerary.cs" />
     <Compile Include="Backtracking\SudokuSolver.cs" />
     <Compile Include="BrailleEncoder.cs" />
