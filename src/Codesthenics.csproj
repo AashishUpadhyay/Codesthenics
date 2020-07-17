@@ -113,6 +113,7 @@
     <Compile Include="Recursion\PlayNim.cs" />
     <Compile Include="Recursion\RegexMatch.cs" />
     <Compile Include="Recursion\TowerOfHanoi.cs" />
+    <Compile Include="SortAndSearch\DutchFlagProblem.cs" />
     <Compile Include="SortElevatorVersions.cs" />
     <Compile Include="Stack\ReconstructArrayWithPlusAndMinusSigns.cs" />
     <Compile Include="Stack\MaximumOfEveryKIntegers.cs" />

@@ -64,7 +64,7 @@ namespace Codesthenics
 			return returnVal;
 		}
 
-		private int[][] BuildDictionary()
+		private Dictionary<int, List<int>> BuildDictionary()
 		{
 			var dict = new Dictionary<int, List<int>>();
 			dict.Add(1, new List<int>() { 2, 5, 4, 6, 8 });

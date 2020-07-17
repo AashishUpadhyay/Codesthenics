@@ -51,6 +51,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="BuildAllBinarySearchTreesTests.cs" />
+    <Compile Include="DutchFlagProblemTests.cs" />
     <Compile Include="NumberOfWaysToDecodeStringTests.cs" />
     <Compile Include="CutBrickWallTests.cs" />
     <Compile Include="BuildTreeUsingPreOrderAndInOrderTraversalTests.cs" />
