@@ -79,9 +79,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdvancedDataStructures\DisjointSet.cs" />
-    <Compile Include="Algorithms\CountingSort.cs" />
-    <Compile Include="Algorithms\RadixSort.cs" />
-    <Compile Include="Algorithms\Quicksort.cs" />
+    <Compile Include="SortAndSearch\CountingSort.cs" />
+    <Compile Include="SortAndSearch\RadixSort.cs" />
+    <Compile Include="SortAndSearch\Quicksort.cs" />
     <Compile Include="AmazonProblems\FindNumberAmazonGoStores.cs" />
     <Compile Include="Arrays\FindIndexWithSum.cs" />
     <Compile Include="Backtracking\AndroidPattern.cs" />
@@ -176,6 +176,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Algorithms\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

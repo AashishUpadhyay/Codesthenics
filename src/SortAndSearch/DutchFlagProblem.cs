@@ -15,8 +15,6 @@ namespace Codesthenics
             var m = 0;
             while (m <= e)
             {
-                Console.WriteLine("s : " + s + "; m : " + m + "; e : " + e);
-
                 if (nums[m] == 0)
                 {
                     Swap(nums, s, m);
