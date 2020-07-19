@@ -79,6 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdvancedDataStructures\DisjointSet.cs" />
+    <Compile Include="Algorithms\Djikstra.cs" />
     <Compile Include="SortAndSearch\CountingSort.cs" />
     <Compile Include="SortAndSearch\RadixSort.cs" />
     <Compile Include="SortAndSearch\Quicksort.cs" />
@@ -177,9 +178,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Algorithms\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
