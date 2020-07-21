@@ -79,6 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdvancedDataStructures\DisjointSet.cs" />
+    <Compile Include="Algorithms\CurrencyArbitrage_BellmanFord.cs" />
     <Compile Include="Algorithms\Djikstra.cs" />
     <Compile Include="SortAndSearch\CountingSort.cs" />
     <Compile Include="SortAndSearch\RadixSort.cs" />
