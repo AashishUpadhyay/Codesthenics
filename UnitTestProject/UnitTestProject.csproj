@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="BuildAllBinarySearchTreesTests.cs" />
     <Compile Include="CurrencyArbitrage_BellmanFordTests.cs" />
+    <Compile Include="FloydWarshallTests.cs" />
     <Compile Include="DjikstraTests.cs" />
     <Compile Include="RadixSortTests.cs" />
     <Compile Include="CountingSortTests.cs" />
