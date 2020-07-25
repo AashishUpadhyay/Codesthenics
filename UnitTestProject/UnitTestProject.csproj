@@ -50,6 +50,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="KnightProbabilityInChessboardTests.cs" />
     <Compile Include="BuildAllBinarySearchTreesTests.cs" />
     <Compile Include="CurrencyArbitrage_BellmanFordTests.cs" />
     <Compile Include="FloydWarshallTests.cs" />
