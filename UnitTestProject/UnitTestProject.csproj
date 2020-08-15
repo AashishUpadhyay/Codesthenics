@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="CountNumberOfSuccessiveOnesInBinaryRepresentationTest.cs" />
     <Compile Include="DivisionWithoutOperatorsIgnoringRemainderTest.cs" />
+    <Compile Include="SevenishNumberTests.cs" />
     <Compile Include="ThreeRepeatingNumbersTest.cs" />
     <Compile Include="BrokenKeyboardTests.cs" />
     <Compile Include="KnightProbabilityInChessboardTests.cs" />

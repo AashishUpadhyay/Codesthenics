@@ -84,6 +84,7 @@
     <Compile Include="Algorithms\Djikstra.cs" />
     <Compile Include="BitManipulation\CountNumberOfSuccessiveOnesInBinaryRepresentation.cs" />
     <Compile Include="BitManipulation\DivisionWithoutOperatorsIgnoringRemainder.cs" />
+    <Compile Include="BitManipulation\SevenishNumber.cs" />
     <Compile Include="BitManipulation\ThreeRepeatingNumbers.cs" />
     <Compile Include="BrokenKeyboard.cs" />
     <Compile Include="DynamicProgramming\KnightProbabilityInChessboard.cs" />
