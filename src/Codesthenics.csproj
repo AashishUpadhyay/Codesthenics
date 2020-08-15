@@ -82,6 +82,7 @@
     <Compile Include="Algorithms\FloydWarshall.cs" />
     <Compile Include="Algorithms\CurrencyArbitrage_BellmanFord.cs" />
     <Compile Include="Algorithms\Djikstra.cs" />
+    <Compile Include="BitManipulation\CountNumberOfSuccessiveOnesInBinaryRepresentation.cs" />
     <Compile Include="BitManipulation\DivisionWithoutOperatorsIgnoringRemainder.cs" />
     <Compile Include="BitManipulation\ThreeRepeatingNumbers.cs" />
     <Compile Include="BrokenKeyboard.cs" />

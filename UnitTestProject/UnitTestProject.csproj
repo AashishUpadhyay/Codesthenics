@@ -50,6 +50,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="CountNumberOfSuccessiveOnesInBinaryRepresentationTest.cs" />
     <Compile Include="DivisionWithoutOperatorsIgnoringRemainderTest.cs" />
     <Compile Include="ThreeRepeatingNumbersTest.cs" />
     <Compile Include="BrokenKeyboardTests.cs" />
