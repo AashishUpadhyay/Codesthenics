@@ -34,5 +34,13 @@ namespace UnitTestProject
 			var count = ap.NumberOfPatterns(3, 3);
 			Assert.IsTrue(count == 320);
 		}
+
+		[TestMethod]
+		public void Test4()
+		{
+			var ap = new AndroidPattern();
+			var count = ap.NumberOfPatterns(4, 6);
+			Assert.IsTrue(count == 34792);
+		}
 	}
 }
