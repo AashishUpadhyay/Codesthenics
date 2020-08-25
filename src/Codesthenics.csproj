@@ -87,6 +87,7 @@
     <Compile Include="BitManipulation\SevenishNumber.cs" />
     <Compile Include="BitManipulation\ThreeRepeatingNumbers.cs" />
     <Compile Include="BrokenKeyboard.cs" />
+    <Compile Include="DynamicProgramming\CoinChange.cs" />
     <Compile Include="DynamicProgramming\KnightProbabilityInChessboard.cs" />
     <Compile Include="SortAndSearch\CountingSort.cs" />
     <Compile Include="SortAndSearch\RadixSort.cs" />
