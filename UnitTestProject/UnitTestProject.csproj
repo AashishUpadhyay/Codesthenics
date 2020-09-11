@@ -53,6 +53,7 @@
     <Compile Include="CoinChangeTests.cs" />
     <Compile Include="CountNumberOfSuccessiveOnesInBinaryRepresentationTest.cs" />
     <Compile Include="DivisionWithoutOperatorsIgnoringRemainderTest.cs" />
+    <Compile Include="MinimumCostForTicketsTests.cs" />
     <Compile Include="SevenishNumberTests.cs" />
     <Compile Include="ThreeRepeatingNumbersTest.cs" />
     <Compile Include="BrokenKeyboardTests.cs" />
