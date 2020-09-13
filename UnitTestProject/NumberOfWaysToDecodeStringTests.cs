@@ -73,5 +73,32 @@ namespace UnitTestProject
 			var w = nwtds.Count("141131331111111339936341111114116343133111133111");
 			Assert.IsTrue(ways.Count == w);
 		}
+
+		[TestMethod]
+		public void Test8()
+		{
+			var nwtds = new NumberOfWaysToDecodeString();
+			var ways = nwtds.NumberOfWays("90");
+			var w = nwtds.Count("90");
+			Assert.IsTrue(ways.Count == w);
+		}
+
+		[TestMethod]
+		public void Test9()
+		{
+			var nwtds = new NumberOfWaysToDecodeString();
+			var ways = nwtds.NumberOfWays("999");
+			var w = nwtds.Count("999");
+			Assert.IsTrue(ways.Count == w);
+		}
+
+		[TestMethod]
+		public void Test10()
+		{
+			var nwtds = new NumberOfWaysToDecodeString();
+			var ways = nwtds.NumberOfWays("9371597631128776948387197132267188677349946742344217846154932859125134924241649584251978418763151253");
+			var w = nwtds.Count("9371597631128776948387197132267188677349946742344217846154932859125134924241649584251978418763151253");
+			Assert.IsTrue(ways.Count == w);
+		}
 	}
 }
