@@ -90,6 +90,7 @@
     <Compile Include="DynamicProgramming\CoinChange.cs" />
     <Compile Include="DynamicProgramming\KnightProbabilityInChessboard.cs" />
     <Compile Include="DynamicProgramming\MinimumCostForTickets.cs" />
+    <Compile Include="DynamicProgramming\NumberOfWaysToClimbStaircase.cs" />
     <Compile Include="SortAndSearch\CountingSort.cs" />
     <Compile Include="SortAndSearch\RadixSort.cs" />
     <Compile Include="SortAndSearch\Quicksort.cs" />
