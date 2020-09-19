@@ -51,6 +51,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="CoinChangeTests.cs" />
+    <Compile Include="SplitArrayTests.cs" />
     <Compile Include="FilterConditionValidationTests.cs" />
     <Compile Include="MinimumCostToPaintHousesTests.cs" />
     <Compile Include="NumberOfWaysToClimbStaircaseTests.cs" />

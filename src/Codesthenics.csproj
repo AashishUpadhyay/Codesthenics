@@ -88,6 +88,7 @@
     <Compile Include="BitManipulation\ThreeRepeatingNumbers.cs" />
     <Compile Include="BrokenKeyboard.cs" />
     <Compile Include="DynamicProgramming\CoinChange.cs" />
+    <Compile Include="DynamicProgramming\SplitArray.cs" />
     <Compile Include="DynamicProgramming\KnightProbabilityInChessboard.cs" />
     <Compile Include="DynamicProgramming\MinimumCostForTickets.cs" />
     <Compile Include="DynamicProgramming\MinimumCostToPaintHouses.cs" />

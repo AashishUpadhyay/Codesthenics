@@ -165,5 +165,13 @@ namespace UnitTestProject
 			var fcv = new FilterConditionValidation();
 			Assert.IsFalse(fcv.IsValid("((5 AND 4 AND 6 AND (((1 OR 2) AND ((3 NOT 4) MOCK (((1 OR 2))) AND 2) AND 5 AND (1 OR 2) AND (3 NOT 4) AND 5))))"));
 		}
+
+		[TestMethod]
+		public void Test22()
+		{
+			var fcv = new FilterConditionValidation();
+			Assert.IsTrue(fcv.IsValid("5 AND 4 NOT 3"));
+			Assert.IsTrue(fcv.Evaluate("5 AND 4 NOT 3") == 17);
+		}
 	}
 }
