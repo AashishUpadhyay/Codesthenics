@@ -9,37 +9,40 @@ namespace Codesthenics
 {
 	public class SplitArray
 	{
-		private List<int> maxSumList = new List<int>();
 		private int[] _arr;
+		private int[][] _dp;
 
 		public int FindLeastMaximumSumOfParts(int[] arr, int parts)
 		{
+			_dp = new int[arr.Length][];
+			for (int i = 0; i < _dp.Length; i++)
+				_dp[i] = new int[parts + 1];
 			_arr = arr;
-			if (FindLeastMaximumSumOfParts(0, parts, 0))
-				return maxSumList.Min();
-			return 0;
+			int returnVal = FindLeastMaximumSumOfParts(0, parts);
+			return returnVal == Int32.MaxValue ? 0 : returnVal;
 		}
 
-		private bool FindLeastMaximumSumOfParts(int index, int parts, int maxSum)
+		private int FindLeastMaximumSumOfParts(int index, int parts)
 		{
 			if (index == _arr.Length)
-				return false;
+				return 0;
 
 			if (parts == 1)
-			{
-				int part1Sum = FindArraySum(index);
-				maxSumList.Add(Math.Max(part1Sum, maxSum));
-				return true;
-			}
+				return FindArraySum(index);
 
-			bool returnVal = false;
+			if (_dp[index][parts] != 0)
+				return _dp[index][parts];
+
+			int returnVal = Int32.MaxValue;
 			int sum = 0;
 			for (int i = index; i < _arr.Length; i++)
 			{
 				sum += _arr[i];
-				if (FindLeastMaximumSumOfParts(i + 1, parts - 1, Math.Max(sum, maxSum)))
-					returnVal = true;
+				int sumReturned = FindLeastMaximumSumOfParts(i + 1, parts - 1);
+				if (sumReturned > 0)
+					returnVal = Math.Min(returnVal, Math.Max(sum, sumReturned));
 			}
+			_dp[index][parts] = returnVal;
 			return returnVal;
 		}
 
