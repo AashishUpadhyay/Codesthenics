@@ -1,0 +1,69 @@
+					A
+			B				C
+		D		E		F		G
+		
+INPUT
+PRE:[A,B,D,E,C,F,G]
+POST:[D,E,B,F,G,C,A]
+
+1.) 
+ROOT: A
+LEFT PRE: [B,D,E]
+LEFT POST: [D,E,B]
+RIGHT PRE: [C,F,G]
+RIGHT POST: [F,G,C]
+
+INPUT
+PRE:[B,D,E]
+POST:[D,E,B]
+
+2.) 
+ROOT: B
+LEFT PRE: [D]  
+LEFT POST:  [D]
+RIGHT PRE:  [E]
+RIGHT POST: [E]
+
+
+INPUT
+[D]
+[D]
+
+3.) 
+ROOT: D
+RETURN
+
+INPUT
+[E]
+[E]
+
+4.) 
+ROOT: E
+RETURN
+
+INPUT
+[C,F,G]
+[F,G,C]
+
+5.) 
+ROOT: C
+LEFT PRE: [F]  
+LEFT POST:  [F]
+RIGHT PRE:  [G]
+RIGHT POST: [G]
+
+INPUT
+[F]
+[F]
+
+6.) 
+ROOT: F
+RETURN
+
+INPUT
+[G]
+[G]
+
+6.) 
+ROOT: G
+RETURN

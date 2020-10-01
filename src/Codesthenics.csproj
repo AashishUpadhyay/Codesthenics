@@ -169,6 +169,7 @@
     <Compile Include="Trees\TreeNode.cs" />
     <Compile Include="Trees\UnivalTreeRevision.cs" />
     <Compile Include="Trees\UnivalTree.cs" />
+    <Compile Include="Trees\PreOrderPostOrder.cs" />
     <Compile Include="Trees\ZigzagLevelOrderTraversal.cs" />
     <Compile Include="Trees\ValidateBinarySearchTree.cs" />
     <Compile Include="Trie\FindPairWithMaxXOR.cs" />

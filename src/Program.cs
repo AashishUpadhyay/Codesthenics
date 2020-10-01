@@ -272,33 +272,34 @@ namespace Codesthenics
 			//var result = stepsToOne.Calculate("305");
 			//Console.Read();
 
-			var ri = new SudokuSolver();
-			var input = new char[9][] {
-				new char[9] { '.', '.', '.', '.', '.', '.', '.', '.', '.' },
-				new char[9] { '.', '.', '.', '.', '.', '.', '.', '.', '.' },
-				new char[9] { '.', '.', '.', '.', '.', '.', '.', '.', '.' },
-				new char[9] { '.', '.', '.', '.', '.', '.', '.', '.', '.' },
-				new char[9] { '.', '.', '.', '.', '.', '.', '.', '.', '.' },
-				new char[9] { '.', '.', '.', '.', '.', '.', '.', '.', '.' },
-				new char[9] { '.', '.', '.', '.', '.', '.', '.', '.', '.' },
-				new char[9] { '.', '.', '.', '.', '.', '.', '.', '.', '.' },
-				new char[9] { '.','.','.','.','.','.','.','.','.'}
-		};
-			var returnValue = ri.SolveSudoku(input);
+			//	var ri = new SudokuSolver();
+			//	var input = new char[9][] {
+			//		new char[9] { '.', '.', '.', '.', '.', '.', '.', '.', '.' },
+			//		new char[9] { '.', '.', '.', '.', '.', '.', '.', '.', '.' },
+			//		new char[9] { '.', '.', '.', '.', '.', '.', '.', '.', '.' },
+			//		new char[9] { '.', '.', '.', '.', '.', '.', '.', '.', '.' },
+			//		new char[9] { '.', '.', '.', '.', '.', '.', '.', '.', '.' },
+			//		new char[9] { '.', '.', '.', '.', '.', '.', '.', '.', '.' },
+			//		new char[9] { '.', '.', '.', '.', '.', '.', '.', '.', '.' },
+			//		new char[9] { '.', '.', '.', '.', '.', '.', '.', '.', '.' },
+			//		new char[9] { '.','.','.','.','.','.','.','.','.'}
+			//};
+			//	var returnValue = ri.SolveSudoku(input);
 
-			foreach(var item in returnValue)
-			{
-				int i = 0;
-				char[] arr = new char[9];
-				foreach (var subitem in item)
-				{
-					arr[i] = subitem;
-					i++;
-				}
-				var str = string.Join(",", arr);
-				Console.WriteLine(str);
-			}
+			//	foreach(var item in returnValue)
+			//	{
+			//		int i = 0;
+			//		char[] arr = new char[9];
+			//		foreach (var subitem in item)
+			//		{
+			//			arr[i] = subitem;
+			//			i++;
+			//		}
+			//		var str = string.Join(",", arr);
+			//		Console.WriteLine(str);
+			//	}
 
+			Console.WriteLine(Environment.ProcessorCount);
 			Console.Read();
 		}
 	}
