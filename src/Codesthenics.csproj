@@ -159,6 +159,7 @@
     <Compile Include="TODO\InsertionSort.cs" />
     <Compile Include="TODO\MergeSort.cs" />
     <Compile Include="TODO\CounterSortForNegativeIntegers.cs" />
+    <Compile Include="Trees\EvaluateReversePolishNotation.cs" />
     <Compile Include="Trees\BuildAllBinarySearchTrees.cs" />
     <Compile Include="AdvancedDataStructures\FenwickTree.cs" />
     <Compile Include="Trees\FindFloorCeilingInBinarySearchTree.cs" />
