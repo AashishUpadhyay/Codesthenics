@@ -93,6 +93,7 @@
     <Compile Include="DynamicProgramming\MinimumCostForTickets.cs" />
     <Compile Include="DynamicProgramming\MinimumCostToPaintHouses.cs" />
     <Compile Include="DynamicProgramming\NumberOfWaysToClimbStaircase.cs" />
+    <Compile Include="Graph\GraphCheckIfCycleExists - Copy.cs" />
     <Compile Include="SortAndSearch\CountingSort.cs" />
     <Compile Include="SortAndSearch\RadixSort.cs" />
     <Compile Include="SortAndSearch\Quicksort.cs" />
@@ -109,7 +110,7 @@
     <Compile Include="Graph\BeatSnakesAndLadders.cs" />
     <Compile Include="Graph\ChooseStepwordChain.cs" />
     <Compile Include="Graph\GraphAM.cs" />
-    <Compile Include="Graph\GraphCheckIfCycleExists.cs" />
+    <Compile Include="Graph\CycleExists.cs" />
     <Compile Include="Graph\GraphAJ.cs" />
     <Compile Include="Graph\NetworkDelayTime.cs" />
     <Compile Include="Graph\RemoveEdgesToCreateEvenTrees.cs" />

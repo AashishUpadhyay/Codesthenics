@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="EvaluateReversePolishNotationTests.cs" />
     <Compile Include="CoinChangeTests.cs" />
+    <Compile Include="CycleExistsTests.cs" />
     <Compile Include="PreOrderPostOrderTests.cs" />
     <Compile Include="SplitArrayTests.cs" />
     <Compile Include="FilterConditionValidationTests.cs" />
