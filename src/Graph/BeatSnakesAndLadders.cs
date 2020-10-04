@@ -61,7 +61,7 @@ namespace Codesthenics
 		}
 
 		private int _minMoves = Int32.MaxValue;
-		public int MinimumMoves(Dictionary<int, int> snakes, Dictionary<int, int> ladders)
+		public int MinimumMoves(Dictionary<int, int> snakesAndLadders)
 		{
 			Queue<int[]> queue = new Queue<int[]>();
 
@@ -84,40 +84,26 @@ namespace Codesthenics
 
 				visited.Add(currentCell);
 
-				if (snakes.ContainsKey(currentCell))
+				if (snakesAndLadders.ContainsKey(currentCell))
 				{
-					queue.Enqueue(new int[2] { snakes[currentCell], currentTurn });
-					continue;
-				}
-
-				if (ladders.ContainsKey(currentCell))
-				{
-					queue.Enqueue(new int[2] { ladders[currentCell], currentTurn });
+					queue.Enqueue(new int[2] { snakesAndLadders[currentCell], currentTurn });
 					continue;
 				}
 
 				var limit = Math.Min(100, currentCell + 6);
 				var nextMoves = Enumerable.Range(currentCell + 1, (limit - currentCell)).ToList();
 
-				var snakeMoves = nextMoves.Where(u => snakes.ContainsKey(u));
-				var ladderMoves = nextMoves.Where(u => ladders.ContainsKey(u));
-
-				if (snakeMoves.Count() == 0 && ladderMoves.Count() == 0)
+				var filteredMoves = nextMoves.Where(u => snakesAndLadders.ContainsKey(u));
+				if (filteredMoves.Count()==0)
 				{
 					queue.Enqueue(new int[2] { nextMoves[nextMoves.Count() - 1], currentTurn + 1 });
 				}
 				else
 				{
-					snakeMoves.ToList().ForEach(u =>
+					filteredMoves.ToList().ForEach(u =>
 					{
 						visited.Add(u);
-						queue.Enqueue(new int[2] { snakes[u], currentTurn + 1 });
-					});
-
-					ladderMoves.ToList().ForEach(u =>
-					{
-						visited.Add(u);
-						queue.Enqueue(new int[2] { ladders[u], currentTurn + 1 });
+						queue.Enqueue(new int[2] { snakesAndLadders[u], currentTurn + 1 });
 					});
 				}
 			}
