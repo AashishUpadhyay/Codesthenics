@@ -93,7 +93,7 @@
     <Compile Include="DynamicProgramming\MinimumCostForTickets.cs" />
     <Compile Include="DynamicProgramming\MinimumCostToPaintHouses.cs" />
     <Compile Include="DynamicProgramming\NumberOfWaysToClimbStaircase.cs" />
-    <Compile Include="Graph\GraphCheckIfCycleExists - Copy.cs" />
+    <Compile Include="Graph\GraphCheckIfCycleExists.cs" />
     <Compile Include="SortAndSearch\CountingSort.cs" />
     <Compile Include="SortAndSearch\RadixSort.cs" />
     <Compile Include="SortAndSearch\Quicksort.cs" />
