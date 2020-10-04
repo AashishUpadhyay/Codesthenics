@@ -84,27 +84,19 @@ namespace Codesthenics
 
 				visited.Add(currentCell);
 
-				if (snakesAndLadders.ContainsKey(currentCell))
-				{
-					queue.Enqueue(new int[2] { snakesAndLadders[currentCell], currentTurn });
-					continue;
-				}
-
 				var limit = Math.Min(100, currentCell + 6);
 				var nextMoves = Enumerable.Range(currentCell + 1, (limit - currentCell)).ToList();
 
-				var filteredMoves = nextMoves.Where(u => snakesAndLadders.ContainsKey(u));
-				if (filteredMoves.Count()==0)
+				foreach(var move in nextMoves)
 				{
-					queue.Enqueue(new int[2] { nextMoves[nextMoves.Count() - 1], currentTurn + 1 });
-				}
-				else
-				{
-					filteredMoves.ToList().ForEach(u =>
+					if (snakesAndLadders.ContainsKey(move))
 					{
-						visited.Add(u);
-						queue.Enqueue(new int[2] { snakesAndLadders[u], currentTurn + 1 });
-					});
+						queue.Enqueue(new int[2] { snakesAndLadders[move], currentTurn + 1 });
+					}
+					else
+					{
+						queue.Enqueue(new int[2] { move, currentTurn + 1 });
+					}
 				}
 			}
 
