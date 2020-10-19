@@ -87,6 +87,7 @@
     <Compile Include="PlayNimTests.cs" />
     <Compile Include="RegexMatchTests.cs" />
     <Compile Include="BeatSnakesAndLaddersAMTests.cs" />
+    <Compile Include="FindMaxMinEfficientlyTests.cs" />
     <Compile Include="TowerOfHanoiTests.cs" />
     <Compile Include="RemoveEdgesToCreateEvenTreesTests.cs" />
     <Compile Include="GraphTests.cs" />
