@@ -28,5 +28,27 @@ namespace Codesthenics
 			}
 			return false;
 		}
+
+		public bool CanWinR(int[] nums)
+		{
+			if (nums[0] == 0 && nums[1] == 0 && nums[2] == 0)
+				return true;
+
+			for (int i = 0; i < nums.Length; i++)
+			{
+				int[] newArr = new int[nums.Length];
+				Array.Copy(nums, newArr, nums.Length);
+				for (int j = 1; j < newArr[i]; j++)
+				{
+					newArr[i] = newArr[i] - j;
+					if (!CanWinR(newArr))
+					{
+						return true;
+					}
+					newArr[i] = newArr[i] + j;
+				}
+			}
+			return false;
+		}
 	}
 }
