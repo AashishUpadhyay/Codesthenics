@@ -37,6 +37,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -139,6 +140,7 @@
     <Compile Include="StepsToOne.cs" />
     <Compile Include="String\CalculateApplesBetweenPeopleWhenTotalApplesAndDifferenceOfAppleIsKnownTheInputIsReallyHuge.cs" />
     <Compile Include="String\CheckIfStringsHaveCommonCharacters.cs" />
+    <Compile Include="String\RearrangeString.cs" />
     <Compile Include="String\LettersInZigZagForm.cs" />
     <Compile Include="String\CheckAnagramMatches.cs" />
     <Compile Include="String\FindLongestPalindromeInString.cs" />

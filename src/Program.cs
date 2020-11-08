@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 
 namespace Codesthenics
 {
@@ -299,7 +300,47 @@ namespace Codesthenics
 			//		Console.WriteLine(str);
 			//	}
 
-			Console.WriteLine(Environment.ProcessorCount);
+			//Console.WriteLine(Environment.ProcessorCount);
+
+			//Console.WriteLine("Integers");
+			//List<int> items = new List<int>() { 
+			//1,
+			//10,
+			//100,
+			//1000,
+			//10000,
+			//100000,
+			//1000000,
+			//10000000,
+			//100000000,
+			//1000000000,
+			//Int32.MaxValue
+			//};
+
+			//foreach (var item in items)
+			//{
+			//	var bytes = BitConverter.GetBytes(item);
+			//	Console.WriteLine(Convert.ToBase64String(bytes));
+			//}
+
+			//Console.WriteLine("Timestamp");
+
+			//var epoch = new DateTime(2019, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+			//for (int i = 1; i <= 1000; i++)
+			//{
+			//	int year = (2019 + i);
+			//	Console.WriteLine("Year : " + year);
+			//	var totalMilliSeconds = Convert.ToInt64((new DateTime(year, 1, 1, 0, 0, 0, DateTimeKind.Utc).ToUniversalTime() - epoch).TotalMilliseconds);
+			//	var dateBytes = BitConverter.GetBytes(totalMilliSeconds);
+			//	Console.WriteLine(Convert.ToBase64String(dateBytes));
+			//}
+
+			//var epoch = new DateTime(2019, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+			//var totalMilliSeconds = Convert.ToInt64((new DateTime(3019, 1, 1, 0, 0, 0, DateTimeKind.Utc).ToUniversalTime() - epoch).TotalMilliseconds);
+			//var dateBytes = BitConverter.GetBytes(totalMilliSeconds);
+			//var locationAlias = Convert.ToBase64String(dateBytes);
+			//Console.WriteLine(locationAlias);
+
 			Console.Read();
 		}
 	}
