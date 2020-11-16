@@ -97,5 +97,19 @@ namespace UnitTestProject
 			var ar = (new MaximumRectangle()).Area(grid);
 			Assert.IsTrue(ar == 6);
 		}
+
+		[TestMethod]
+		public void Test8()
+		{
+			var grid = new char[3][]
+				{
+					new char[4]{'1','1','0','1'},
+					new char[4]{'1','1','0','1'},
+					new char[4]{'1','1','1','1'},
+				};
+
+			var ar = (new MaximumRectangle()).Area(grid);
+			Assert.IsTrue(ar == 6);
+		}
 	}
 }
