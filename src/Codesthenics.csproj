@@ -97,6 +97,7 @@
     <Compile Include="Graph\NumberofDistinctIslands.cs" />
     <Compile Include="Graph\BeatSnakesAndLaddersAM.cs" />
     <Compile Include="Graph\GraphCheckIfCycleExists.cs" />
+    <Compile Include="Matrix\MaximumRectangle.cs" />
     <Compile Include="Recursion\FindMaxMinEfficiently.cs" />
     <Compile Include="SortAndSearch\CountingSort.cs" />
     <Compile Include="SortAndSearch\RadixSort.cs" />
