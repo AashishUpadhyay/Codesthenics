@@ -11,8 +11,8 @@ namespace Codesthenics
 		private int _len = 0;
 		private int _wid = 0;
 		private int _area = 0;
-		private int[][] _matrix;
-		public int Area(int[][] matrix)
+		private char[][] _matrix;
+		public int Area(char[][] matrix)
 		{
 			_matrix = matrix;
 
@@ -37,7 +37,7 @@ namespace Codesthenics
 
 		private void CalculateArea(int i, int j, int width, int[] visited, int height)
 		{
-			if (j < 0 || j > _wid - 1 || _matrix[i][j] == 0 || visited[j] == 1)
+			if (j < 0 || j > _wid - 1 || _matrix[i][j] == '0' || visited[j] == 1)
 				return;
 
 			visited[j] = 1;
@@ -59,8 +59,9 @@ namespace Codesthenics
 			int ht = 0;
 			for (int m = i; m > -1; m--)
 			{
-				if (_matrix[m][j] == 1)
-					ht++;
+				if (_matrix[m][j] == '0')
+					break;
+				ht++;
 			}
 			return ht;
 		}
