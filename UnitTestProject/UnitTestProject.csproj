@@ -50,6 +50,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="NumberOfClosedIslandsTests.cs" />
     <Compile Include="MaximumRectangleTests.cs" />
     <Compile Include="NumberofDistinctIslandsTests.cs" />
     <Compile Include="EvaluateReversePolishNotationTests.cs" />
