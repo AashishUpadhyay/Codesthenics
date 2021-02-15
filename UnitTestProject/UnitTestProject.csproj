@@ -50,6 +50,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="FindTwoNonOverlappingSubArraysEachWithTargetSumTests.cs" />
+    <Compile Include="LruCacheRevisionRevisionTests.cs" />
     <Compile Include="NumberOfClosedIslandsTests.cs" />
     <Compile Include="MaximumRectangleTests.cs" />
     <Compile Include="NumberofDistinctIslandsTests.cs" />
