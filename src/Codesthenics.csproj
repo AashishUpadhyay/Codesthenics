@@ -83,6 +83,8 @@
     <Compile Include="Algorithms\FloydWarshall.cs" />
     <Compile Include="Algorithms\CurrencyArbitrage_BellmanFord.cs" />
     <Compile Include="Algorithms\Djikstra.cs" />
+    <Compile Include="SortAndSearch\BinarySearch.cs" />
+    <Compile Include="Arrays\MaxesAndNums.cs" />
     <Compile Include="Arrays\FindTwoNonOverlappingSubArraysEachWithTargetSum.cs" />
     <Compile Include="BitManipulation\CountNumberOfSuccessiveOnesInBinaryRepresentation.cs" />
     <Compile Include="BitManipulation\DivisionWithoutOperatorsIgnoringRemainder.cs" />
