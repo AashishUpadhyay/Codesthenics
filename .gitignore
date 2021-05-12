@@ -1,6 +1,12 @@
-.vs/
-src/bin/
-src/obj/
+Codesthenics/bin/
+Problems/bin/
+Codesthenics/obj/
+Problems/obj/
+Tests/bin/
+Tests/obj/
+Tests/TestResults/
 UnitTestProject/bin/
 UnitTestProject/obj/
 packages/
+.DS_Store
+.vs
