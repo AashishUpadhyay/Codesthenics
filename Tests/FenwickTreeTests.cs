@@ -23,7 +23,7 @@ namespace Tests
             var ft = new FenwickTree();
             var input = new int[] { 1, 3, 3, 10, 5, 11, 7, 36, 9, 19 };
             ft.Update(4, 5, input);
-            CollectionAssert.Equals(new int[] { 1, 3, 4, 10, 10, 16, 7, 41, 9, 19 }, input);
+            CollectionAssert.AreEqual(new int[] { 1, 3, 3, 10, 10, 16, 7, 41, 9, 19 }, input);
         }
 
         [TestMethod]
