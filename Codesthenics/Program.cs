@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Patterns;
 using Problems;
 
 namespace Codesthenics
