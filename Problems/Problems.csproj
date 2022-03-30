@@ -8,10 +8,12 @@
     <None Remove="SystemDesign\" />
     <None Remove="SystemDesign\ParkingLot\" />
     <None Remove="OptimizedPriorityQueue" />
+    <None Remove="ParallelProgramming\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="SystemDesign\" />
     <Folder Include="SystemDesign\ParkingLot\" />
+    <Folder Include="ParallelProgramming\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="OptimizedPriorityQueue" Version="5.1.0" />
